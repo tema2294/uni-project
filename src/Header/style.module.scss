@@ -1,6 +1,54 @@
 .HeaderContainer {
   width: 100%;
-  padding: 0 109px;
+  padding: 32px 109px;
   display: flex;
   justify-content: space-between;
+}
+.logo {
+  width: 100px;
+  height: 32px;
+  background: #C4C4C4;
+}
+.logoContainer {
+  display: flex;
+}
+.logoText {
+  width: 104px;
+  height: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #FFFFFF;
+
+}
+.NavBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.NavBar {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #FFFFFF;
+  div:first-child{
+    margin-left: 0!important;
+  }
+  div {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+  div:last-child {
+    margin-left: 101px;
+    svg {
+      margin-right: 7px;
+    }
+  }
 }
