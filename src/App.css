@@ -11,7 +11,8 @@ body {
   justify-content: center;
   padding: 0 13%;
   flex-wrap: wrap;
-  background: url("https://kartinkinaden.ru/uploads/posts/2021-01/1610909797_14-p-temnii-fon-s-asfaltom-24.jpg") top;
+  background: url("./backg.png") no-repeat white;
+  background-size: 100% 962px ;
 }
 /*///hello*/
 
@@ -39,6 +40,42 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top:34px;
+  padding: 0 109px;
+}
+.logo {
+  width: 100px;
+  height: 32px;
+  background: #C4C4C4;
+}
+.logoContainer {
+  display: flex;
+}
+.logoText {
+  width: 104px;
+  height: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #FFFFFF;
+
+}
+li {
+  list-style-type:none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
 @keyframes App-logo-spin {

@@ -2,9 +2,11 @@ import React from "react"
 import classesAll from "./../styleAll.module.scss"
 import classes from "./style.module.scss.sass"
 import clsx from "clsx";
+import {GetData} from "../../resData";
+import {Link} from "react-router-dom";
 
 export function MainPage() {
-
+    const data = GetData("Top")
     return (
         <div className={classesAll.MainContainer}>
             <div className={classesAll.HeaderCenter}>
@@ -15,7 +17,18 @@ export function MainPage() {
                 </div>
             </div>
             <div className={classesAll.box}>
-
+                <div className={classesAll.headerBox}>Топ продаж</div>
+                <div className={classesAll.content}>
+                    {data.map((key,i)=>
+                        <div key={i} className={classesAll.card}>
+                        <div style={{background: `url(${key.img})`,backgroundSize: "cover"}} className={classesAll.image}/>
+                        <div className={classesAll.textcard}>{key.name}</div>
+                        <div className={classesAll.info}>
+                            <div className={classesAll.price}>{key.price+"руб."}</div>
+                            <div className={classesAll.btnBuy}>В корзину</div>
+                        </div>
+                    </div>)}
+                </div>
             </div>
         </div>
     )
