@@ -75,6 +75,14 @@
   height: fit-content;
   margin-top: 33px;
 }
+.content2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  margin-top: 33px;
+  min-height: 600px;
+}
 .card {
   display: flex;
   flex-direction: column;

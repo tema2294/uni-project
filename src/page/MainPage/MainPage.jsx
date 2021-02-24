@@ -5,7 +5,7 @@ import clsx from "clsx";
 import {GetData} from "../../resData";
 import {Link} from "react-router-dom";
 
-export function MainPage() {
+export function MainPage(props,state) {
     const data = GetData("Top")
     return (
         <div className={classesAll.MainContainer}>
@@ -18,6 +18,7 @@ export function MainPage() {
             </div>
             <div className={classesAll.box}>
                 <div className={classesAll.headerBox}>Топ продаж</div>
+                <div onClick={()=> props.setState((prev)=>[...prev,{2:2,3:53,4:44}])}>Плюсик</div>
                 <div className={classesAll.content}>
                     {data.map((key,i)=>
                         <div key={i} className={classesAll.card}>

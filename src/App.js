@@ -10,14 +10,15 @@ import { Link } from "react-router-dom"
 
 
 function App() {
-    const [state,setState] = useState("")
+    const [state,setState] = useState([{1:1,2:2,3:3}])
+    console.log(state)
     return (
 
             <div className="App">
                 <Header/>
                 <Switch>
-                    <Route exact path={"/"} component={MainPage}/>
-                    <Route path={"/1"} component={About}/>
+                    <Route exact path={"/"} children={<MainPage setState={setState} state={state}/>}/>
+                    <Route path={"/About"} children={<About setState={setState} state={state} />} />
                 </Switch>
                 <div className="footer">
                     <div>

@@ -19,7 +19,7 @@ export function Header() {
                     </Link>
                 </div>
                 <div>
-                    <Link to={"/1"}>О нас</Link>
+                    <Link to={"/About"}>О нас</Link>
                 </div>
                 <div>Контакты</div>
                 <div>Что с моим заказом?</div>
