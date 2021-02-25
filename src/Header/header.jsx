@@ -21,9 +21,12 @@ export function Header() {
                 <div>
                     <Link to={"/About"}>О нас</Link>
                 </div>
-                <div>Контакты</div>
+                <div>
+                   <Link to={"/Contacts"}> Контакты </Link>
+                </div>
                 <div>Что с моим заказом?</div>
                 <div>
+                    <Link to={"/Basket"}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="24 / shopping / cart">
                             <path id="icon" fillRule="evenodd" clipRule="evenodd"
@@ -32,6 +35,7 @@ export function Header() {
                         </g>
                     </svg>
                     Корзина
+                    </Link>
                 </div>
             </div>
         </div>

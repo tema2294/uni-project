@@ -7,6 +7,8 @@ import classes from "./Header/style.module.scss";
 import {About} from "./page/about/about";
 import { Redirect, Route, Switch } from "react-router-dom"
 import { Link } from "react-router-dom"
+import {Contacts} from "./page/contacts/contacts";
+import {Basket} from "./page/basket/basket";
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
                 <Switch>
                     <Route exact path={"/"} children={<MainPage setState={setState} state={state}/>}/>
                     <Route path={"/About"} children={<About setState={setState} state={state} />} />
+                    <Route path={"/Contacts"} children={<Contacts/>} />
+                    <Route path={"/Basket"}  children={<Basket/>} />
                 </Switch>
                 <div className="footer">
                     <div>
