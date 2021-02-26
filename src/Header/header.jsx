@@ -1,11 +1,12 @@
 import React from "react";
 import classes from "./style.module.scss"
 import {Link} from "react-router-dom";
+import clsx from "clsx";
 
 export function Header() {
     return (
         <div className={classes.HeaderContainer}>
-            <div className={classes.logoContainer}>
+            <div className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft")}>
                 <div className={classes.logo}/>
                 <div className={classes.logoText}>
                     Интернет-магазин
@@ -23,6 +24,12 @@ export function Header() {
                 </div>
                 <div>
                    <Link to={"/Contacts"}> Контакты </Link>
+                </div>
+                <div>
+                    <Link to={"/Contacts"}> Отзывы </Link>
+                </div>
+                <div>
+                    <Link to={"/Contacts"}> Советы по выбору </Link>
                 </div>
                 <div>Что с моим заказом?</div>
                 <div>

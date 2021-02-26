@@ -1,8 +1,11 @@
 body {
   background: #ffffff;
+
+
 }
 * {
   box-sizing:border-box;
+  font-family: Arial;
 }
 ::-webkit-scrollbar-button {
   background-image:url('');
@@ -80,6 +83,7 @@ body {
   justify-content: space-between;
   margin-top:34px;
   padding: 0 109px;
+  margin-bottom: 50px;
 }
 .logo {
   width: 100px;
@@ -116,5 +120,14 @@ ul {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 1800px) {
+  .App {
+    padding: 0 6%;
+  }
+}@media (max-width: 1536px) {
+  .App {
+    padding: 0 1%;
   }
 }

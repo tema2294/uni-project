@@ -4,15 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, HashRouter} from 'react-router-dom';
+import {ToastProvider} from "react-toast-notifications";
 
 
 ReactDOM.render(
 
 <React.StrictMode>
+    <ToastProvider  autoDismiss
+                    autoDismissTimeout={5000}
+                    placement="top-right">
     <HashRouter>
     <App/>
     </HashRouter>
-
+        </ToastProvider>
 </React.StrictMode>
 
 ,

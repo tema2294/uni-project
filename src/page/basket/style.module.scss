@@ -1,5 +1,83 @@
 .content {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+.result {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid black;
+  justify-content: space-between;
+  padding-top: 80px
+}
+.Gobuy {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 80px
 }
 
+.itemBasket {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  margin-bottom: 20px;
+  align-items: center;
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+.img {
+  height: 150px;
+}
+.Count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  div:first-child {
+   color: #6f6f6f;
+    font-size: 39px;
+    padding-bottom: 7px;
+    cursor: pointer;
+  }
+  div:nth-child(2) {
 
+    display: flex;
+    justify-content: center;
+    margin: 0 8px;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #b3b3b7;
+    font-size: 22px;
+    line-height: 1.29;
+    overflow: hidden;
+    -moz-appearance: textfield;
+    text-align: center;
+  }
+  div:nth-child(3) {
+    color: #504f4f;
+    font-size: 31px;
+    cursor: pointer;
+
+  }
+}
+.count {
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+}
+.btnbuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 17px;
+  background: #f8b00f;
+  color: #000000;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -3,11 +3,15 @@
   padding: 32px 109px;
   display: flex;
   justify-content: space-between;
+  div {
+    font-size: 16px;
+  }
 }
 .logo {
   width: 100px;
   height: 32px;
   background: #C4C4C4;
+
 }
 .logoContainer {
   display: flex;
@@ -18,7 +22,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 12px!important;
   line-height: 14px;
 
   color: #FFFFFF;
@@ -46,12 +50,24 @@
     a {
       color: white;
       text-decoration: none;
+      display: flex;
+      align-items: center;
     }
   }
   div:last-child {
     margin-left: 101px;
     svg {
       margin-right: 7px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .NavBar {
+    div:last-child {
+      margin-left: 50px;
+      svg {
+        margin-right: 7px;
+      }
     }
   }
 }

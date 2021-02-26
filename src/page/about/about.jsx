@@ -8,7 +8,7 @@ export function About(props,state) {
     return (
         <div className={classesAll.MainContainer}>
 
-            <div className={classesAll.box}>
+            <div className={clsx(classesAll.box,"animate__animated","animate__fadeInUpBig")}>
                 <div className={classesAll.headerBox}>О нас</div>
                 <div onClick={()=> props.setState((prev)=>[...prev,{0:0,3:"eqwe",4:"eqweq"}])}>Плюсик</div>
                 <div className={classesAll.content2}>
