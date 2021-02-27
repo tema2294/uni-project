@@ -10,10 +10,11 @@ import { Link } from "react-router-dom"
 import {Contacts} from "./page/contacts/contacts";
 import {Basket} from "./page/basket/basket";
 import {Payment} from "./page/Payment/Payment";
+import {Catalog} from "./page/Catalog/catalog";
 
 
 function App() {
-    const [state,setState] = useState([{img: "https://p7.hiclipart.com/preview/433/66/478/ohorongo-cement-bag-gunny-sack-portable-network-graphics-bag.jpg",name: "Штукатурка гипсовая Волма Слой 30 кг",count : 1,id: 1,price: 600}])
+    const [state,setState] = useState([])
     const [sum,setSum]=useState(0)
     console.log(state)
     function addBasket (item) {
@@ -53,13 +54,12 @@ function App() {
             const findItem =prev[findIndex]
             const NewItem = {...findItem, count: findItem.count - 1}
 
-            if (findItem ) {
+            if (findItem && findItem.count >1 ) {
                 const NewItem = {...findItem, count: findItem.count - 1}
                 if (findItem.count > 1) return [...prev.slice(0,findIndex),NewItem,...prev.slice(findIndex+1,prev.lenght)]
                 if (findItem.count === 1) return  [prev[0],NewItem,...prev.slice(findIndex+1,prev.lenght)]
-                if (findItem.count === 0)return [NewItem,...prev.slice(findIndex+1,prev.lenght)]
+                if (findItem.count === 0)return [...newArr]
             }
-
             else {
                 return [...newArr]
             }
@@ -75,12 +75,14 @@ function App() {
                     <Route path={"/Contacts"} children={<Contacts/>} />
                     <Route path={"/Basket"}  children={<Basket sum={sum} state={state} deleteItem={deleteItem} setState={addBasket}/>} />
                     <Route path={"/Payment"}  children={<Payment sum={sum} />} />
+                    <Route path={"/Catalog"}  children={<Catalog setState={addBasket} />} />
+
                 </Switch>
                 <div className="footer">
                     <div>
                         <ul>
-                            <li><Link to={"/"}>Как заказать</Link></li>
-                            <li><Link to={"1"}>Как оплатить</Link></li>
+                            <li><Link>Как заказать</Link></li>
+                            <li><Link>Как оплатить</Link></li>
                             <li>Доставка и самовывоз</li>
                             <li>Клиентская поддержка</li>
                             <li>Подарочная карта</li>

@@ -16,7 +16,7 @@ export function MainPage(props,state) {
                 <div className={classesAll.HeaderFirst}>Стройматериалы с бесплатной доставкой по Ярославлю</div>
                 <div className={classesAll.SecondHeader}>Бесплатная доставка до квартиры</div>
                 <div className={classesAll.containerHeaderLine}>
-                    <div className={clsx(classesAll.btn,classesAll.mt5)}>Смотреть каталог</div>
+                    <Link to={"/Catalog"} className={clsx(classesAll.btn,classesAll.mt5)}>Смотреть каталог</Link>
                 </div>
             </div>
             <div className={clsx(classesAll.box,"animate__animated","animate__fadeInUpBig")}>
@@ -24,7 +24,7 @@ export function MainPage(props,state) {
                 <div className={classesAll.content}>
                     {data.map((key,i)=>
                         <div key={i} className={classesAll.card}>
-                        <div style={{background: `url(${key.img})`,backgroundSize: "cover"}} className={classesAll.image}/>
+                        <div style={{background: `url(${key.img})`}} className={classesAll.image}/>
                         <div className={classesAll.textcard}>{key.name}</div>
                         <div className={classesAll.info}>
                             <div className={classesAll.price}>{key.price+"руб."}</div>
@@ -37,6 +37,7 @@ export function MainPage(props,state) {
                         </div>
                     </div>)}
                 </div>
+                <div style={{marginTop: "20px",fontSize: "18px",textAlign: "right"}} className={classesAll.headerBox}><Link to={"/Catalog"}>Cмотреть каталог →</Link> </div>
             </div>
         </div>
     )

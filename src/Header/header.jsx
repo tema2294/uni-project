@@ -15,7 +15,7 @@ export function Header() {
             </div>
             <div className={classes.NavBar}>
                 <div>
-                    <Link to={"/"}>
+                    <Link to={"/Catalog"}>
                         Каталог
                     </Link>
                 </div>

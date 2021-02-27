@@ -32,12 +32,13 @@
 }
 .img {
   height: 150px;
+  width: 200px!important;
 }
 .Count {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 200px!important;
   div:first-child {
    color: #6f6f6f;
     font-size: 39px;
@@ -80,4 +81,18 @@
   border-radius: 7px;
   cursor: pointer;
   text-decoration: none;
+}
+.nullBasket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  background: #c9c9c9;
+  color: #282c34;
+  border-radius: 7px;
+}
+.textItem {
+  width: 350px!important;
+  overflow: hidden;
 }

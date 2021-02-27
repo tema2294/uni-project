@@ -10,10 +10,16 @@ export function About(props,state) {
 
             <div className={clsx(classesAll.box,"animate__animated","animate__fadeInUpBig")}>
                 <div className={classesAll.headerBox}>О нас</div>
-                <div onClick={()=> props.setState((prev)=>[...prev,{0:0,3:"eqwe",4:"eqweq"}])}>Плюсик</div>
                 <div className={classesAll.content2}>
-                    Наша компания занимается продажей товаров высшего качество.
-                    Я привожу,жека торгует .Все дела в общем все очень весело и круто
+                    «Интернет магазин стройматериалов» - компания-ритейлер,<br/> специализирующаяся на продаже товаров для строительства,<br/> отделки и обустройства дома.<br/> Мы отправляем заказы покупателям в регионы России и СНГ,<br/> гарантируя своевременность выполнения заказа.<br/><br/><br/>
+
+                    Наши контакты:<br/><br/>
+
+                    WhatsApp: +7(999)-790-10-85 Артем<br/><br/>
+
+                    +7(962)-200-06-32 Евгений<br/><br/>
+
+                    Г. Ярославль, ул. Союзная 144
                 </div>
                 <YMaps>
                     <Map className={classes.map}

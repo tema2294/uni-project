@@ -37,8 +37,9 @@
 }
 .btn {
   padding: 17px 40px;
-
+  text-decoration: none;
   background: #FFFFFF;
+  color: black!important;
   border-radius: 20px;
 }
 .containerHeaderLine {
@@ -76,6 +77,7 @@
   grid-column-gap: 120px;
   height: fit-content;
   margin-top: 33px;
+  row-gap: 20px;
 }
 .content2 {
   display: flex;
@@ -83,6 +85,8 @@
   align-items: flex-start;
   height: fit-content;
   margin-top: 33px;
+  text-align: left;
+  margin-bottom: 50px;
 }
 .card {
   display: flex;
@@ -91,6 +95,9 @@
 }
 .image {
   height: 288px;
+  background-size: contain!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
 }
 .textcard {
   font-family: Roboto;
@@ -101,6 +108,8 @@
   text-align: left;
   color: #000000;
   margin-top: 15px;
+  height: 44px;
+  overflow: hidden;
 }
 .info {
   display: flex;

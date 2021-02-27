@@ -19,7 +19,7 @@ export function Basket(props) {
                             return (
                                 <div key={key.id} className={classes.itemBasket}>
                                     <div><img className={classes.img} src={key.img}/></div>
-                                    <div>{key.name}</div>
+                                    <div className={classes.textItem}>{key.name}</div>
                                     <div className={classes.Count}>
                                         <div onClick={() => props.deleteItem(key)}>-</div>
                                         <div>{key.count}</div>
@@ -33,13 +33,21 @@ export function Basket(props) {
                         }
                     )}
                 </div>
+                {props.sum !== 0 &&
+                    <>
                 <div className={classes.result}>
                     <div>Сумма:</div>
                     <div className={classes.count}>{formatAmount(props.sum) + " руб"}</div>
                 </div>
-                <div className={classes.Gobuy}>
-                    <Link to={"/Payment"} className={classes.btnbuy}>Оформить заказ</Link>
-                </div>
+
+                    <div className={classes.Gobuy}>
+                        <Link to={"/Payment"} className={classes.btnbuy}>Оформить заказ</Link>
+                    </div>
+                </>
+                }
+                {props.sum === 0 &&
+                <div className={classes.nullBasket}>Корзина пуста</div>
+                }
             </div>
         </div>
     )

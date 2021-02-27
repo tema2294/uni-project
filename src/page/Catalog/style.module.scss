@@ -1,0 +1,44 @@
+.map {
+  width: 100%;
+  height: 800px;
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.cardCatalog {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 25px;
+  height: 200px;
+  border: 1px solid #5a5a5a;
+  text-decoration: none;
+  width: 200px;
+
+  &:first-child {
+    background-size: cover;
+    background: url("https://res.cloudinary.com/lmru-test/image/upload/f_auto,q_90,w_205,h_205,c_pad,b_white,d_photoiscoming.png/elbrus/images/1-stroymaterialy1.jpg") center;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+  }
+  &:last-child {
+    background: url("https://res.cloudinary.com/lmru-test/image/upload/f_auto,q_90,w_205,h_205,c_pad,b_white,d_photoiscoming.png/elbrus/images/2-stolyarka.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+}
+.headerCard {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background: #e0b264;
+  border-radius: 7px;
+  color: black;
+  font-size: 18px;
+}
