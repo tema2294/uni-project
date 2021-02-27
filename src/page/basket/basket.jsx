@@ -3,6 +3,7 @@ import classes from "./style.module.scss"
 import classesAll from "./../styleAll.module.scss"
 import clsx from "clsx";
 import {Link} from "react-router-dom";
+import {formatAmount} from "../../formatAmount";
 
 export function Basket(props) {
     const dataBasket = props.state
@@ -15,7 +16,6 @@ export function Basket(props) {
                 <div className={classes.content}>
 
                     {dataBasket.map(key =>  {
-                            sum = sum + key.count*key.price
                             return (
                                 <div key={key.id} className={classes.itemBasket}>
                                     <div><img className={classes.img} src={key.img}/></div>
@@ -35,7 +35,7 @@ export function Basket(props) {
                 </div>
                 <div className={classes.result}>
                     <div>Сумма:</div>
-                    <div className={classes.count}>{sum+ " руб"}</div>
+                    <div className={classes.count}>{formatAmount(props.sum) + " руб"}</div>
                 </div>
                 <div className={classes.Gobuy}>
                     <Link to={"/Payment"} className={classes.btnbuy}>Оформить заказ</Link>

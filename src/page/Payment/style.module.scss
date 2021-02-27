@@ -1,0 +1,183 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+button:focus {
+  outline: none;
+}
+.stepBuy {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.Pay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48%;
+  margin-bottom: 20px;
+}
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48%;
+  margin-bottom: 20px;
+
+}
+.headerStep {
+  width: 100%;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.InputCustom {
+  padding: 5px 10px 5px;
+  border: none;
+  border-bottom: 1px solid #dfdfe1;
+  background: none;
+  font-size: 18px;
+  font-family: inherit;
+  line-height: 25px;
+  color: #151528; width: 100%;
+height: 30px;  border-radius: 0;
+}
+.header2 {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+}
+.infoInput {
+  padding-left: 10px;
+}
+.header2 {
+  margin-bottom: 20px;
+}
+.TabsJoined {
+  display: flex;
+  align-items: center;
+  .Tab {
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 0;
+    border-width: 1px;
+    &:first-child {
+      border-top-left-radius: 7px!important;
+      border-bottom-left-radius: 7px!important;
+    }
+    &:last-child {
+      border-top-right-radius: 7px!important;
+      border-bottom-right-radius: 7px!important;
+    }
+  }
+}
+.Tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.Tab {
+  text-align: center;
+  margin-right: 20px;
+  height: 30px;
+  min-width: 100px;
+  border-radius: 10px;
+  border: 2px solid #508ff4;
+  color:  #508ff4;
+  font-size: 14px;
+  // line-height: 25px;
+  background: #ffffff;
+  cursor: pointer;
+  &:hover {
+    // color: $dark-blue;
+    // border-color: $dark-blue;
+    opacity: 0.85;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+  &.Active {
+    color: white;
+    background-color:  #508ff4;
+    animation: progress-animation 0.2s ease-in-out 1 ;
+    cursor: auto;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+.map {
+  width: 50%;
+  height: 500px;
+}
+.buyCard {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  background: #6f6f6f;
+  height: 100%;
+  svg {
+    margin-bottom: -2px;
+  }
+  div {
+    margin-left: 10px
+  }
+}
+.inputCard {
+  width: 176px;
+  text-align: center;
+}
+.inputMouth {
+  width: 30px!important;
+  text-align: center;
+  height: 20px;
+
+}
+.Month {
+  display: flex;
+  width: 100%;
+}
+.separator {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.PaymentCard {
+  height: 143px;
+  padding-left: 20px;
+  display: flex;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  background: #bababa;
+  position: relative;
+  align-items: center;
+  div {
+    height: 20px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.visa {
+  position: absolute;
+  width: 146px!important;
+  height: 50px!important;
+  top: 20%;
+  right: 20px;
+}
