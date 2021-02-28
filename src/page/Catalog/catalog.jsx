@@ -4,6 +4,7 @@ import classesAll from "./../styleAll.module.scss"
 import clsx from "clsx";
 import {GetData} from "../../resData";
 import {useToasts} from "react-toast-notifications";
+import {formatAmount} from "../../formatAmount";
 
 export function Catalog(props) {
     const [state,setState] = useState(0)
@@ -36,7 +37,7 @@ export function Catalog(props) {
                             <div style={{background: `url(${key.img})`}} className={classesAll.image}/>
                             <div className={classesAll.textcard}>{key.name}</div>
                             <div className={classesAll.info}>
-                                <div className={classesAll.price}>{key.price+"руб."}</div>
+                                <div className={classesAll.price}>{formatAmount(key.price)+" "+"руб."}</div>
                                 <div onClick={()=> {
                                     props.setState(key)
                                     addToast("Товар успешно добавлен в корзину", {

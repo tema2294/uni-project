@@ -9,7 +9,7 @@ export function WhatMyItem(props,state) {
         <div className={classesAll.MainContainer}>
 
             <div className={clsx(classesAll.box,"animate__animated","animate__bounce")}>
-                <div className={classesAll.headerBox}>Cкидочная система</div>
+                <div className={classesAll.headerBox}>Что с моим заказом?</div>
                 <div className={classesAll.content2}>
                     После того, как вы оплатили заказ, в зависимости от выбора способа оплаты, с ним происходит следующее:
                     <br/><br/>

@@ -7,7 +7,7 @@ import clsx from "clsx";
 export function Header() {
     return (
         <div className={classes.HeaderContainer}>
-            <Link to={"/"} className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft")}>
+            <Link to={"/"} className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft","animate__delay-1s")}>
                 <div style={{background: `url(${logo})`}} className={classes.logo}/>
                 <div className={classes.logoText}>
                     Интернет<br/>магазин

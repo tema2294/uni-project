@@ -6,6 +6,7 @@ import {GetData} from "../../resData";
 import {Link} from "react-router-dom";
 import {useToasts} from "react-toast-notifications";
 import { Modal } from 'react-responsive-modal';
+import {formatAmount} from "../../formatAmount";
 
 export function MainPage(props,state) {
     const data = GetData("Top")
@@ -29,7 +30,7 @@ export function MainPage(props,state) {
                         <div style={{background: `url(${key.img})`}} className={classesAll.image}/>
                         <div className={classesAll.textcard}>{key.name}</div>
                         <div className={classesAll.info}>
-                            <div className={classesAll.price}>{key.price+"руб."}</div>
+                            <div className={classesAll.price}>{formatAmount(key.price)+" "+"руб."}</div>
                             <div onClick={()=> {
                                 props.setState(key)
                                 addToast("Товар успешно добавлен в корзину", {
