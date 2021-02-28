@@ -1,10 +1,11 @@
-import React from "react"
+import React, {useState} from "react"
 import classesAll from "./../styleAll.module.scss"
-import classes from "./style.module.scss.sass"
+import classes from "./style.module.scss"
 import clsx from "clsx";
 import {GetData} from "../../resData";
 import {Link} from "react-router-dom";
 import {useToasts} from "react-toast-notifications";
+import { Modal } from 'react-responsive-modal';
 
 export function MainPage(props,state) {
     const data = GetData("Top")
@@ -19,6 +20,7 @@ export function MainPage(props,state) {
                     <Link to={"/Catalog"} className={clsx(classesAll.btn,classesAll.mt5)}>Смотреть каталог</Link>
                 </div>
             </div>
+
             <div className={clsx(classesAll.box,"animate__animated","animate__fadeInUpBig")}>
                 <div className={classesAll.headerBox}>Топ продаж</div>
                 <div className={classesAll.content}>

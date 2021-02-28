@@ -1,9 +1,13 @@
+* {
+  background-repeat: no-repeat!important;
+}
 .MainContainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 
 }
 .HeaderCenter {
@@ -125,6 +129,7 @@
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1000;
   &:hover {
     background: #b3b3b3;
   }

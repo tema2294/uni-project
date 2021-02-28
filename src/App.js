@@ -11,12 +11,19 @@ import {Contacts} from "./page/contacts/contacts";
 import {Basket} from "./page/basket/basket";
 import {Payment} from "./page/Payment/Payment";
 import {Catalog} from "./page/Catalog/catalog";
+import {Success} from "./page/successBuy/Success";
+import {WhatMyItem} from "./page/WhatWithMyItem/What";
+import {Feedback} from "./page/Feedback/feedback";
+import {Advice} from "./page/advice/advice";
+import {useToasts} from "react-toast-notifications";
 
 
 function App() {
     const [state,setState] = useState([])
     const [sum,setSum]=useState(0)
-    console.log(state)
+
+    const { addToast } = useToasts();
+
     function addBasket (item) {
         const id = item.id
         setSum((prev)=>prev+item.price)
@@ -65,6 +72,12 @@ function App() {
             }
         })
     }
+    function Toast(text) {
+        addToast(text, {
+            appearance: 'info',
+
+        })
+    }
     return (
 
             <div className="App">
@@ -74,18 +87,22 @@ function App() {
                     <Route path={"/About"} children={<About setState={setState} state={state} />} />
                     <Route path={"/Contacts"} children={<Contacts/>} />
                     <Route path={"/Basket"}  children={<Basket sum={sum} state={state} deleteItem={deleteItem} setState={addBasket}/>} />
-                    <Route path={"/Payment"}  children={<Payment sum={sum} />} />
+                    <Route path={"/Payment"}  children={<Payment sum={sum} setSum={setSum} setState={setState}/>} />
                     <Route path={"/Catalog"}  children={<Catalog setState={addBasket} />} />
+                    <Route path={"/Success"}  children={<Success />} />
+                    <Route path={"/What"}  children={<WhatMyItem />} />
+                    <Route path={"/Feedback"}  children={<Feedback />} />
+                    <Route path={"/Advice"}  children={<Advice />} />
 
                 </Switch>
                 <div className="footer">
                     <div>
                         <ul>
-                            <li><Link>Как заказать</Link></li>
-                            <li><Link>Как оплатить</Link></li>
-                            <li>Доставка и самовывоз</li>
-                            <li>Клиентская поддержка</li>
-                            <li>Подарочная карта</li>
+                            <li onClick={()=>Toast("Переходите в каталог,добавляете нужный товар в корзину и оплачивате.")}>Как заказать</li>
+                            <li onClick={()=>Toast("Чтобы оплатить товар ,перейдите в корзину и нажмите оформить заказ.")}>Как оплатить</li>
+                            <li onClick={()=>Toast("Доставка осуществляется в любую точку мира")}>Доставка и самовывоз</li>
+                            <li onClick={()=>Toast("В контактах вы сможете найти номер телефона и получить требуюмую поддержку")}>Клиентская поддержка</li>
+                            <li onClick={()=>Toast("Подарочная карта заказывается по горячей линии.Номер указан в контактах")}>Подарочная карта</li>
                         </ul>
                     </div>
                     <div className={classes.logoContainer}>

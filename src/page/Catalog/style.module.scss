@@ -17,7 +17,14 @@
   border: 1px solid #5a5a5a;
   text-decoration: none;
   width: 200px;
+  cursor: pointer;
+  transition: 0.5s;
 
+  &:hover {
+    transform:scale(1.1);
+    transition: 0.5s;
+
+  }
   &:first-child {
     background-size: cover;
     background: url("https://res.cloudinary.com/lmru-test/image/upload/f_auto,q_90,w_205,h_205,c_pad,b_white,d_photoiscoming.png/elbrus/images/1-stroymaterialy1.jpg") center;

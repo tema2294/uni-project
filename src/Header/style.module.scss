@@ -9,23 +9,26 @@
 }
 .logo {
   width: 100px;
-  height: 32px;
-  background: #C4C4C4;
-
+  height: 63px;
+  background-size: cover!important;
+  border-radius: 7px;
 }
 .logoContainer {
   display: flex;
+  align-items: center;
+  text-decoration: none!important;
 }
 .logoText {
   width: 104px;
   height: 28px;
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
-  font-size: 12px!important;
-  line-height: 14px;
-
-  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px !important;
+  line-height: 19px;
+  margin-top: -12px;
+  color: #FFFFFF!important;
 
 }
 

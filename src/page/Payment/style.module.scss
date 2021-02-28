@@ -182,3 +182,19 @@ input::-webkit-inner-spin-button {
   top: 20%;
   right: 20px;
 }
+.operation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 80px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 30px;
+    background: orange;
+    color: black;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}

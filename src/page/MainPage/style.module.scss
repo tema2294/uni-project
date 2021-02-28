@@ -1,0 +1,16 @@
+  .customModal {
+    position: absolute;
+    top: 20%;
+    margin:0 auto;
+    width: auto;
+    height: fit-content!important;
+    //min-height: 800px;
+    max-width: 2000px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      top:0!important;
+      right:0!important;
+    }
+  }

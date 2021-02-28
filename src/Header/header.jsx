@@ -1,18 +1,19 @@
 import React from "react";
 import classes from "./style.module.scss"
 import {Link} from "react-router-dom";
+import logo from "./../brand.png"
 import clsx from "clsx";
 
 export function Header() {
     return (
         <div className={classes.HeaderContainer}>
-            <div className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft")}>
-                <div className={classes.logo}/>
+            <Link to={"/"} className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft")}>
+                <div style={{background: `url(${logo})`}} className={classes.logo}/>
                 <div className={classes.logoText}>
-                    Интернет-магазин
-                    стройматериалов
+                    Интернет<br/>магазин
+
                 </div>
-            </div>
+            </Link>
             <div className={classes.NavBar}>
                 <div>
                     <Link to={"/Catalog"}>
@@ -23,15 +24,15 @@ export function Header() {
                     <Link to={"/About"}>О нас</Link>
                 </div>
                 <div>
-                   <Link to={"/Contacts"}> Контакты </Link>
+                   <Link to={"/Contacts"}>Cкидки</Link>
                 </div>
                 <div>
-                    <Link to={"/Contacts"}> Отзывы </Link>
+                    <Link to={"/feedback"}> Отзывы </Link>
                 </div>
                 <div>
-                    <Link to={"/Contacts"}> Советы по выбору </Link>
+                    <Link to={"/Advice"}> Советы по выбору </Link>
                 </div>
-                <div>Что с моим заказом?</div>
+                <div><Link to={"/What"}>Что с моим заказом?</Link></div>
                 <div>
                     <Link to={"/Basket"}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

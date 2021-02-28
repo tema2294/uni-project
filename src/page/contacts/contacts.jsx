@@ -9,11 +9,12 @@ export function Contacts(props,state) {
         <div className={classesAll.MainContainer}>
 
             <div className={clsx(classesAll.box,"animate__animated","animate__bounce")}>
-                <div className={classesAll.headerBox}>Контакты</div>
+                <div className={classesAll.headerBox}>Cкидочная система</div>
                 <div className={classesAll.content2}>
-                    Мой номер вот<br/>
-                    Жекин номер вот <br/>
-                    <br/><br/><br/><br/><br/>ляляляляля тополя
+                    Скидка начисляется автоматически в размере до 10% от стоимости заказа, при условии самовывоза.
+                </div>
+                <div style={{backgroundRepeat:" no-reapeat"}} className={classes.images}>
+
                 </div>
             </div>
         </div>

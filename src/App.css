@@ -1,14 +1,20 @@
 body {
   background: #ffffff;
-
-
+}
+li {
+  cursor: pointer;
+}
+@font-face {
+  font-family: "TypeMates";
+  src: url("./TypeMates.otf");
+  font-weight: 300;
+  font-style: normal;
 }
 * {
   box-sizing:border-box;
-  font-family: Arial;
+  font-family: "TypeMates"!important;
 }
 ::-webkit-scrollbar-button {
-  background-image:url('');
   background-repeat:no-repeat;
   width:6px;
   height:0px
