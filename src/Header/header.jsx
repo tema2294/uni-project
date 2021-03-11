@@ -3,8 +3,11 @@ import classes from "./style.module.scss"
 import {Link} from "react-router-dom";
 import logo from "./../brand.png"
 import clsx from "clsx";
+import {useDispatch} from "react-redux";
+import {actionCreator} from "../store/actionCreators/action";
 
 export function Header() {
+    const dispatch = useDispatch()
     return (
         <div className={classes.HeaderContainer}>
             <Link to={"/"} className={clsx(classes.logoContainer,"animate__animated","animate__rotateInDownLeft","animate__delay-1s")}>
@@ -21,7 +24,7 @@ export function Header() {
                     </Link>
                 </div>
                 <div>
-                    <Link to={"/About"}>О нас</Link>
+                    <Link onClick={()=>dispatch(actionCreator.addBasket("hello"))} to={"/About"}>О нас</Link>
                 </div>
                 <div>
                    <Link to={"/Contacts"}>Cкидки</Link>

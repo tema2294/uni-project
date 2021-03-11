@@ -1,6 +1,5 @@
 import './App.css';
 import React, {useState} from "react";
-import {Main} from "./Main/Main";
 import {Header} from "./Header/header";
 import {MainPage} from "./page/MainPage/MainPage";
 import classes from "./Header/style.module.scss";
@@ -75,7 +74,6 @@ function App() {
     function Toast(text) {
         addToast(text, {
             appearance: 'info',
-
         })
     }
     return (

@@ -24,7 +24,7 @@ export function GetData(type) {
                 {img: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_90,h_240,c_pad,b_white,d_photoiscoming.png/LMCode/82127095.jpg",name: "Плитка декоративная Вельс Брик белая 10,75 м²",count : 1,id: 266,price: 999},
                 {img: "https://fishkaremonta.by/upload/iblock/dc9/dc98bae40cb5e72344d7aa93c8c06416.jpeg",name: "Штукатурка гипсовая Волма Слой 34 кг",count : 1,id: 27,price: 800},
                 {img: "https://fishkaremonta.by/upload/iblock/dc9/dc98bae40cb5e72344d7aa93c8c06416.jpeg",name: "Штукатурка гипсовая Волма Слой 64 кг",count : 1,id: 28,price: 1500},
-                {img: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_90,h_240,c_pad,b_white,d_photoiscoming.png/LMCode/18482159.jpg",name: "Звукоизоляция Knauf № 2 Акустик Knauf 50 мм 6 м²",count : 24,id: 222,price: 600},
+                {img: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_90,h_240,c_pad,b_white,d_photoiscoming.png/LMCode/18482159.jpg",name: "Звукоизоляция Knauf № 2 Акустик Knauf 50 мм 6 м²",count : 1,id: 222,price: 600},
 
 
             ]
